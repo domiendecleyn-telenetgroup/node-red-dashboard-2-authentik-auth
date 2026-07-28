@@ -13,6 +13,7 @@ function getUser(headers) {
   user.userName = headers["x-authentik-username"] || null;
   user.email = headers["x-authentik-email"] || null;
   user.groups = headers["x-authentik-groups"] || null;
+  user.forwardedFor = headers["x-forwarded-for"] ?.split(",")[0] ?.trim() || null;
   user.provider = "Authentik";
   return user;
 }
