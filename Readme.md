@@ -1,5 +1,7 @@
 # Node-RED Dashboard with Authentik Authentication
 
+Forked from [cgjgh](https://github.com/cgjgh/node-red-dashboard-2-authentik-auth) to add an additional user info header with the public IP of the signed in user.
+
 Use [Authentik](https://goauthentik.io/) as an authentication provider for the [Node-RED Dashboard 2](https://github.com/FlowFuse/node-red-dashboard).
 
 <table style="border: none;">
@@ -25,6 +27,7 @@ The proxy provider will set the appropiate headers necessary for Dashboard 2.0 t
 | `userName` | `x-authentik-username` |
 | `email` | `x-authentik-email` |
 | `groups` | `x-authentik-groups` |
+| `forwardedFor` | `x-forwarded-for` |
 
 
 
