@@ -1,4 +1,8 @@
 function getUser(headers) {
+  
+  console.log("Forked Authentik call");
+  console.warn(headers);
+  
   var user = {};
   const authentik_user = headers["x-authentik-uid"] || null;
   if (!authentik_user) {
